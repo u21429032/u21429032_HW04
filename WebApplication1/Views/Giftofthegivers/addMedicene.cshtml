@@ -1,0 +1,48 @@
+﻿@model IEnumerable<WebApplication1.Models.Medication>
+
+@{
+    ViewBag.Title = "addMedicene";
+}
+
+<h2>Medication</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.MedicationName)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.MedicationType)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Prescription)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.PatientName)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MedicationName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MedicationType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Prescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PatientName)
+                </td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>

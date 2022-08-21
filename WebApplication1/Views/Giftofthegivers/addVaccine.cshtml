@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebApplication1.Models.Vaccinations>
+
+@{
+    ViewBag.Title = "addVaccine";
+}
+
+<h2>Vaccinated Patients</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.VancineName)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.VacineDescription)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.VacineType)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.PatientName)
+            </th>
+        </tr>
+        </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VancineName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VacineDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VacineType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PatientName)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
